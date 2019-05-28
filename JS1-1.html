@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+		window.onload = function() {
+			var oBtn1 = document.getElementById('btn1');
+			var oBtn2 = document.getElementById('btn2');
+			var oBtn3 = document.getElementById('btn3');
+			var oBtn4 = document.getElementById('btn4');
+			var oP = document.getElementById('p1');
+
+			var num = 16;
+			oBtn1.onclick = function(){
+				num--;
+				oP.style.fontSize = num + 'px';
+			}
+			oBtn2.onclick = function(){
+				if (num < 22) {
+					num++;
+					oP.style.fontSize = num + 'px';
+				}
+			}
+			oBtn3.onclick = function() {
+				oP.className = 'red';
+			}
+			oBtn4.onclick = function() {
+				oP.className = 'yellow';
+			}
+		}
+	</script>
+	<style type="text/css">
+		.red {
+			width: 300px;
+			padding: 30px;
+			background: red;
+			color: yellow;
+			border: 10px solid #ccc;
+		}
+		.yellow {
+			width: 500px;
+			background: yellow;
+			padding: 20px;
+			color: red;
+			border: 20px solid #444;
+		}
+	</style>
+</head>
+<body>
+	<input id="btn1" type="button" value="-">
+	<input id="btn2" type="button" value="+">
+	<input id="btn3" type="button" value="红">
+	<input id="btn4" type="button" value="黄">
+	<p id="p1" style="font-size: 16px;">央视网消息：7月26日，习近平出席金砖国家领导人第十次会晤并发表了题为《让美好愿景变为现实》的重要讲话。这次讲话言简意赅，精彩务实，就金砖合作未来的发展提出四大倡议，为第二个“金色十年”的美好愿景变为现实，提供了方向和路径。</p>
+	
+</body>
+</html>
